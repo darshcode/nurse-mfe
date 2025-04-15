@@ -17,6 +17,14 @@ export default defineConfig({
       shared: ["react", "react-dom", "@apollo/client", "lucide-react"],
     }),
   ],
+
+  preview: {
+    host: "0.0.0.0",
+    port: 3002,
+    strictPort: true,
+    allowedHosts: ["nurse-mfe.onrender.com"], // ✅ add your Render hostname here
+  },
+
   build: {
     modulePreload: false,
     target: "esnext",

@@ -12,7 +12,7 @@ import { setContext } from "@apollo/client/link/context";
 
 // Create HTTP link to the gateway
 const httpLink = createHttpLink({
-  uri: "http://localhost:4001/graphql",
+  uri: import.meta.env.VITE_GATEWAY_URL || "http://localhost:4001/graphql",
 });
 
 // Add authentication to requests
